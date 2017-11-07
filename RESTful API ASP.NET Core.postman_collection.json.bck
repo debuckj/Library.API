@@ -1,0 +1,749 @@
+{
+	"info": {
+		"name": "RESTful API ASP.NET Core",
+		"_postman_id": "7072285b-a877-ea1f-d9ac-e09d29b1d50f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (unexisting)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76153df4-6687-4253-8937-b42556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76153df4-6687-4253-8937-b42556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Books for Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"25320c5e-f58a-4b1f-b63a-8ee07a840bdf",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Books for Author (unexisting Author)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b455548abe/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b455548abe",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/bc4c35c3-3857-4250-9449-155fcf5109ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"bc4c35c3-3857-4250-9449-155fcf5109ec"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Author)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b456748abe/books/bc4c35c3-3857-4250-9449-155fcf5109ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b456748abe",
+						"books",
+						"bc4c35c3-3857-4250-9449-155fcf5109ec"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Book)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/bc4cc3-3857-4250-9449-155fcf5109ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"bc4cc3-3857-4250-9449-155fcf5109ec"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (Accept: application/json)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (Accept: application/xml)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (invalid body)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"invalid\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The Restaurant at the End of the Universe\",\n\t\"description\": \"The sequel to The Hitchhiker's Guide to the Galaxy\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/f74d6899-9ed2-4137-9876-66b070553f8f/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"f74d6899-9ed2-4137-9876-66b070553f8f",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Author)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The Restaurant at the End of the Universe\",\n\t\"description\": \"The sequel to The Hitchhiker's Guide to the Galaxy\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/f74d99-9ed2-4137-9876-66b070553f8f/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"f74d99-9ed2-4137-9876-66b070553f8f",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author with Books",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n    \"genre\": \"Thriller\",\n    \"books\": [\n    \t{\n    \t\t\"title\": \"American Tabloid\",\n    \t\t\"description\": \"Fist book in the Underworld USA trilogy\"\n    \t},\n    \t{\n    \t\t\"title\": \"The Cold Six Thousand\",\n    \t\t\"description\": \"Second book in the Underworld USA trilogy\"\n    \t}\n    \t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author collection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t    \"firstName\": \"James\",\n\t    \"lastName\": \"Ellroy\",\n\t    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n\t    \"genre\": \"Thriller\"\n\t},\n\t{\n\t\t\"firstName\": \"Jonathan\",\n\t    \"lastName\": \"Franzen\",\n\t    \"dateOfBirth\": \"1959-08-17T00:00:00\",\n\t    \"genre\": \"Drama\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authorcollections",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authorcollections"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (single, unexisting - should fail w 404)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/753df4-6687-4353-8937-b45556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"753df4-6687-4353-8937-b45556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (single, existing - should fail w 409)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (XML input)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (XML input, XML output)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"25320c5e-f58a-4b1f-b63a-8ee07a840bdf",
+						"books",
+						"70a1f9b9-0a37-4c1a-99b1-c7709fc64167"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Book)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/250c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"250c5e-f58a-4b1f-b63a-8ee07a840bdf",
+						"books",
+						"70a1f9b9-0a37-4c1a-99b1-c7709fc64167"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Author)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/2c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"2c5e-f58a-4b1f-b63a-8ee07a840bdf",
+						"books",
+						"70a1f9b9-0a37-4c1a-99b1-c7709fc64167"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"25320c5e-f58a-4b1f-b63a-8ee07a840bdf"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -81,7 +81,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books",
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -90,7 +90,7 @@
 					"path": [
 						"api",
 						"authors",
-						"25320c5e-f58a-4b1f-b63a-8ee07a840bdf",
+						"76053df4-6687-4353-8937-b45556748abe",
 						"books"
 					]
 				},
@@ -129,7 +129,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/bc4c35c3-3857-4250-9449-155fcf5109ec",
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -140,7 +140,7 @@
 						"authors",
 						"76053df4-6687-4353-8937-b45556748abe",
 						"books",
-						"bc4c35c3-3857-4250-9449-155fcf5109ec"
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
 					]
 				},
 				"description": ""
@@ -739,6 +739,853 @@
 						"api",
 						"authors",
 						"25320c5e-f58a-4b1f-b63a-8ee07a840bdf"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A Game of Thrones - Updated\",\n\t\"description\": \"Description - Updated\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (no description)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A Game of Thrones - Updated\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (with ids)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A Game of Thrones - Test with both ids\",\n\t\"description\": \"Description - Test with both ids\",\n\t\"id\": \"447eb762-95e9-4c31-95e1-b20053fbe215\",\n\t\"authorId\": \"76053df4-6687-4353-8937-b45556748abe\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Author)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A Game of Thrones - Updated\",\n\t\"description\": \"Description - Updated\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/760df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"760df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Book)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"The Winds of Winter\",\n\t\"description\": \"Forthcoming 6th novel in A Song of Ice and Fire.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/76053df4-6687-4353-8937-b45556748abe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"76053df4-6687-4353-8937-b45556748abe"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/title\",\n        \"value\": \"A Game of Thrones - Updated\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (multiple)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/title\",\n        \"value\": \"A Game of Thrones - Updated\"\n\t},\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/description\",\n        \"value\": \"Description - Updated\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (remove)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"remove\",\n        \"path\": \"/description\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (copy and add)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"add\",\n        \"path\": \"/description\",\n        \"value\": \"new description\"\n\t},\n\t{\n        \"op\": \"copy\",\n        \"from\": \"/description\",\n        \"path\": \"/title\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Author)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/title\",\n        \"value\": \"A Game of Thrones - Updated\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (unexisting Book)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/title\",\n        \"value\": \"The Winds of Winter\"\n\t},\n\t{\n        \"op\": \"replace\",\n        \"path\": \"/description\",\n        \"value\": \"Description of The Winds of Winter\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/457eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"457eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (null values)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": null,\n\t\"description\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/f74d6899-9ed2-4137-9876-66b070553f8f/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"f74d6899-9ed2-4137-9876-66b070553f8f",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (invalid values)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": null,\n\t\"description\": \"Bilge water execution dock Sink me barkadeer splice the main brace Chain Shot chase guns handsomely line Sail ho. Piracy yardarm driver measured fer yer chains rigging swab scuppers pressgang pirate ye. Black spot me grog blossom squiffy furl yo-ho-ho handsomely topmast boatswain code of conduct. Blow the man down ahoy shrouds Chain Shot stern parley jib quarterdeck fire in the hole booty. Pinnace gangplank reef coxswain mutiny bowsprit gunwalls yardarm Yellow Jack gangway. Swab Gold Road scuttle code of conduct grog reef sails walk the plank wherry gibbet Skip to cont Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead. Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead. Lucio fulci tremor est dark vivos magna. Expansis creepy arm yof darkness ulnis witchcraft missing carnem armis Kirkman Moore and Adlard caeruleum in locis. Romero morbo Congress amarus in auras. Nihil horum sagittis tincidunt, zombie slack-jawed gelida survival portenta. The unleashed virus est, et iam zombie mortui ambulabunt super terram. Souless mortuum glassy-eyed oculos attonitos indifferent back zom bieapoc alypse. An hoc dead snow braaaiiiins sociopathic incipere Clairvius Narcisse, an ante? Is bello mundi z? ho barque careen to go on account Letter of Marque Jack Tar heave to chase guns gangway. Chase guns grapple topmast furl coxswain flogging stern run a rig gangway draft. Topsail piracy handsomely ye careen rigging driver grog league topgallant. Bilge Arr Jack Ketch brig Davy Jones' Locker run a shot across the bow long clothes maroon wherry hulk. Run a rig Corsair strike colors lookout tender spyglass scallywag warp transom chantey. Piracy Jack Tar lad fore run a shot across the bow shrouds square-rigged parrel long clothes spike. Run a shot across the bow wench chandler fire in the hole rope's end walk the plank crow's nest lad Gold Road starboard. Loaded to the gunwalls Pirate Round Privateer capstan mizzen Cat o'nine tails lateen sail hearties Corsair overhaul. Long boat plunder hogshead reef blow the man down bilge rat log gun lugger loaded to the gunwalls. Cog spyglass poop deck Arr jib coxswain handsomely doubloon pink Pirate Round. Scourge of the seven seas rope's end weigh anchor fire in the hole reef sails me sheet spike jib mizzenmast. Sloop jib stern lookout flogging ye chase Barbary Coast black spot wherry. Rigging scourge of the seven seas Chain Shot swing the lead wherry Davy Jones' Locker reef sails yardarm rutters fire in the hole. Long boat mutiny log gaff draft hail-shot bounty bilge rat bring a spring upon her cable Nelsons folly. Chase guns brigantine heave down booty brig pillage black spot sloop six pounders spanker. Careen pillage spike reef sails gun capstan no prey, no pay deadlights bucko Spanish Main. Black spot lee crow's nest schooner gun hands barkadeer lateen sail pillage topgallant. Man-of-war Pirate Round sutler jolly boat spike yawl topgallant matey Spanish Main Letter of Marque. Pillage Sink me schooner bilge Buccaneer knave gaff carouser strike colors jack. Corsair American Main spanker come about barkadeer Sail ho hogshead nipperkin cog hail-shot. Blow the man down wherry keel port parrel gally keelhaul yardarm reef sails to go on account. Brigantine hempen halter skysail brig gibbet spirits lugsail knave come about matey. Matey poop deck topsail starboard aft Cat o'nine tails rigging lateen sail wherry run a shot across the bow. Jack bowsprit fathom fluke galleon black spot marooned hardtack Sail ho parrel. Corsair broadside Shiver me timbers ahoy Letter of Marque fathom crow's nest man-of-war bilge water Plate Fleet. Spirits pinnace grapple boatswain clipper jack Jack Ketch capstan gangway crack Jennys tea cup. Belay Arr topsail hulk barkadeer red ensign chandler overhaul clap of thunder matey. Overhaul topsail aye Davy Jones' Locker cable holystone fluke Yellow Jack matey gangway. Nipperkin starboard clap of thunder matey scuttle chandler boatswain Cat o'nine tails schooner heave to. Rum man-of-war plunder jolly boat long clothes Admiral of the Black cackle fruit ye hogshead dead men tell no tales. Tender run a rig pirate snow galleon scourge of the seven seas loaded to the gunwalls mizzen cog scallywag. Cat o'nine tails carouser American Main swing the lead gangplank Corsair log Jolly Roger warp coxswain. Weigh anchor skysail tender handsomely main sheet hempen halter lee Letter of Marque quarter scourge of the seven seas. Yardarm overhaul chantey scurvy plunder rope's end port barkadeer log matey. Interloper chase take a caulk hempen halter log no prey, no pay ye lanyard stern overhaul. Grog blossom Brethren of the Coast reef sails lugger crack Jennys tea cup Privateer lateen sail run a shot across the bow ballast Cat o'nine tails. Mizzenmast chandler Pirate Round aye Jack Ketch sutler to go on account line lateen sail furl. Dead men tell no tales line nipperkin doubloon dance the hempen jig black spot broadside carouser marooned lugger. Hardtack red ensign haul wind chase Pirate Round loaded to the gunwalls booty aft spike ho. Starboard doubloon spike tender parrel Davy Jones' Locker hulk Arr jack pirate. Hempen halter heave down haul wind bowsprit Shiver me timbers Plate Fleet bilge water plunder Yellow Jack piracy. Lugger draught sheet Nelsons folly hail-shot grog jolly boat Shiver me timbers lee come about. Long boat skysail Sink me Buccaneer hardtack quarter lookout execution dock scurvy coxswain. Avast cutlass case shot scuttle capstan wench provost doubloon lateen sail Sea Legs. Spirits snow careen ahoy bilge rat to go on account scurvy gally log execution dock. Main sheet Privateer knave black spot scuttle spirits piracy crack Jennys tea cup clipper furl. Reef sails topmast parrel bilge water Jack Ketch Pirate Round hogshead bowsprit schooner red ensign. Shiver me timbers tack bilge rat hardtack interloper capstan topgallant killick smartly loot. Line fore to go on account carouser loaded to the gunwalls topmast lass snow lateen sail lanyard. Port Gold Road coffer killick coxswain red ensign lugsail cutlass Chain Shot carouser. Bilge water smartly shrouds lass yard Privateer walk the plank interloper brig log. Square-rigged killick holystone pirate barque bilge rat hempen halter piracy scourge of the seven seas crack Jennys tea cup. Sloop man-of-war grapple holystone cackle fruit long boat quarterdeck pinnace cutlass Yellow Jack. Mizzen Spanish Main Gold Road bounty holystone trysail spirits bilged on her anchor boatswain carouser. Scurvy jack gibbet Nelsons folly handsomely splice the main brace pressgang transom execution dock coffer. Flogging rutters reef chantey Davy Jones' Locker Sink me mizzenmast sheet hardtack ballast. Admiral of the Black jack run a rig Letter of Marque Jolly Roger gangplank flogging belaying pin Sea Legs spike. Blimey long boat tackle cog boatswain Davy Jones' Locker gibbet gabion avast fore. Pink bucko poop deck dead men tell no tales splice the main brace Sea Legs scuttle pressgang Barbary Coast landlubber or just lubber. Gaff scourge of the seven seas reef sails jib bilge rat long boat bowsprit jack barkadeer hands. Spyglass fore deadlights parrel fire in the hole fire ship coffer run a rig no prey, no pay schooner. \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/f74d6899-9ed2-4137-9876-66b070553f8f/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"f74d6899-9ed2-4137-9876-66b070553f8f",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (title = description)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A new book\",\n\t\"description\": \"A new book\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/f74d6899-9ed2-4137-9876-66b070553f8f/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"f74d6899-9ed2-4137-9876-66b070553f8f",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (long title = long description)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Bilge water execution dock Sink me barkadeer splice the main brace Chain Shot chase guns handsomely line Sail ho. Piracy yardarm driver measured fer yer chains rigging swab scuppers pressgang pirate ye. Black spot me grog blossom squiffy furl yo-ho-ho handsomely topmast boatswain code of conduct. Blow the man down ahoy shrouds Chain Shot stern parley jib quarterdeck fire in the hole booty. Pinnace gangplank reef coxswain mutiny bowsprit gunwalls yardarm Yellow Jack gangway. Swab Gold Road scuttle code of conduct grog reef sails walk the plank wherry gibbet Skip to cont Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead. Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead. Lucio fulci tremor est dark vivos magna. Expansis creepy arm yof darkness ulnis witchcraft missing carnem armis Kirkman Moore and Adlard caeruleum in locis. Romero morbo Congress amarus in auras. Nihil horum sagittis tincidunt, zombie slack-jawed gelida survival portenta. The unleashed virus est, et iam zombie mortui ambulabunt super terram. Souless mortuum glassy-eyed oculos attonitos indifferent back zom bieapoc alypse. An hoc dead snow braaaiiiins sociopathic incipere Clairvius Narcisse, an ante? Is bello mundi z? ho barque careen to go on account Letter of Marque Jack Tar heave to chase guns gangway. Chase guns grapple topmast furl coxswain flogging stern run a rig gangway draft. Topsail piracy handsomely ye careen rigging driver grog league topgallant. Bilge Arr Jack Ketch brig Davy Jones' Locker run a shot across the bow long clothes maroon wherry hulk. Run a rig Corsair strike colors lookout tender spyglass scallywag warp transom chantey. Piracy Jack Tar lad fore run a shot across the bow shrouds square-rigged parrel long clothes spike. Run a shot across the bow wench chandler fire in the hole rope's end walk the plank crow's nest lad Gold Road starboard. Loaded to the gunwalls Pirate Round Privateer capstan mizzen Cat o'nine tails lateen sail hearties Corsair overhaul. Long boat plunder hogshead reef blow the man down bilge rat log gun lugger loaded to the gunwalls. Cog spyglass poop deck Arr jib coxswain handsomely doubloon pink Pirate Round. Scourge of the seven seas rope's end weigh anchor fire in the hole reef sails me sheet spike jib mizzenmast. Sloop jib stern lookout flogging ye chase Barbary Coast black spot wherry. Rigging scourge of the seven seas Chain Shot swing the lead wherry Davy Jones' Locker reef sails yardarm rutters fire in the hole. Long boat mutiny log gaff draft hail-shot bounty bilge rat bring a spring upon her cable Nelsons folly. Chase guns brigantine heave down booty brig pillage black spot sloop six pounders spanker. Careen pillage spike reef sails gun capstan no prey, no pay deadlights bucko Spanish Main. Black spot lee crow's nest schooner gun hands barkadeer lateen sail pillage topgallant. Man-of-war Pirate Round sutler jolly boat spike yawl topgallant matey Spanish Main Letter of Marque. Pillage Sink me schooner bilge Buccaneer knave gaff carouser strike colors jack. Corsair American Main spanker come about barkadeer Sail ho hogshead nipperkin cog hail-shot. Blow the man down wherry keel port parrel gally keelhaul yardarm reef sails to go on account. Brigantine hempen halter skysail brig gibbet spirits lugsail knave come about matey. Matey poop deck topsail starboard aft Cat o'nine tails rigging lateen sail wherry run a shot across the bow. Jack bowsprit fathom fluke galleon black spot marooned hardtack Sail ho parrel. Corsair broadside Shiver me timbers ahoy Letter of Marque fathom crow's nest man-of-war bilge water Plate Fleet. Spirits pinnace grapple boatswain clipper jack Jack Ketch capstan gangway crack Jennys tea cup. Belay Arr topsail hulk barkadeer red ensign chandler overhaul clap of thunder matey. Overhaul topsail aye Davy Jones' Locker cable holystone fluke Yellow Jack matey gangway. Nipperkin starboard clap of thunder matey scuttle chandler boatswain Cat o'nine tails schooner heave to. Rum man-of-war plunder jolly boat long clothes Admiral of the Black cackle fruit ye hogshead dead men tell no tales. Tender run a rig pirate snow galleon scourge of the seven seas loaded to the gunwalls mizzen cog scallywag. Cat o'nine tails carouser American Main swing the lead gangplank Corsair log Jolly Roger warp coxswain. Weigh anchor skysail tender handsomely main sheet hempen halter lee Letter of Marque quarter scourge of the seven seas. Yardarm overhaul chantey scurvy plunder rope's end port barkadeer log matey. Interloper chase take a caulk hempen halter log no prey, no pay ye lanyard stern overhaul. Grog blossom Brethren of the Coast reef sails lugger crack Jennys tea cup Privateer lateen sail run a shot across the bow ballast Cat o'nine tails. Mizzenmast chandler Pirate Round aye Jack Ketch sutler to go on account line lateen sail furl. Dead men tell no tales line nipperkin doubloon dance the hempen jig black spot broadside carouser marooned lugger. Hardtack red ensign haul wind chase Pirate Round loaded to the gunwalls booty aft spike ho. Starboard doubloon spike tender parrel Davy Jones' Locker hulk Arr jack pirate. Hempen halter heave down haul wind bowsprit Shiver me timbers Plate Fleet bilge water plunder Yellow Jack piracy. Lugger draught sheet Nelsons folly hail-shot grog jolly boat Shiver me timbers lee come about. Long boat skysail Sink me Buccaneer hardtack quarter lookout execution dock scurvy coxswain. Avast cutlass case shot scuttle capstan wench provost doubloon lateen sail Sea Legs. Spirits snow careen ahoy bilge rat to go on account scurvy gally log execution dock. Main sheet Privateer knave black spot scuttle spirits piracy crack Jennys tea cup clipper furl. Reef sails topmast parrel bilge water Jack Ketch Pirate Round hogshead bowsprit schooner red ensign. Shiver me timbers tack bilge rat hardtack interloper capstan topgallant killick smartly loot. Line fore to go on account carouser loaded to the gunwalls topmast lass snow lateen sail lanyard. Port Gold Road coffer killick coxswain red ensign lugsail cutlass Chain Shot carouser. Bilge water smartly shrouds lass yard Privateer walk the plank interloper brig log. Square-rigged killick holystone pirate barque bilge rat hempen halter piracy scourge of the seven seas crack Jennys tea cup. Sloop man-of-war grapple holystone cackle fruit long boat quarterdeck pinnace cutlass Yellow Jack. Mizzen Spanish Main Gold Road bounty holystone trysail spirits bilged on her anchor boatswain carouser. Scurvy jack gibbet Nelsons folly handsomely splice the main brace pressgang transom execution dock coffer. Flogging rutters reef chantey Davy Jones' Locker Sink me mizzenmast sheet hardtack ballast. Admiral of the Black jack run a rig Letter of Marque Jolly Roger gangplank flogging belaying pin Sea Legs spike. Blimey long boat tackle cog boatswain Davy Jones' Locker gibbet gabion avast fore. Pink bucko poop deck dead men tell no tales splice the main brace Sea Legs scuttle pressgang Barbary Coast landlubber or just lubber. Gaff scourge of the seven seas reef sails jib bilge rat long boat bowsprit jack barkadeer hands. Spyglass fore deadlights parrel fire in the hole fire ship coffer run a rig no prey, no pay schooner. \",\n\t\"description\": \"Bilge water execution dock Sink me barkadeer splice the main brace Chain Shot chase guns handsomely line Sail ho. Piracy yardarm driver measured fer yer chains rigging swab scuppers pressgang pirate ye. Black spot me grog blossom squiffy furl yo-ho-ho handsomely topmast boatswain code of conduct. Blow the man down ahoy shrouds Chain Shot stern parley jib quarterdeck fire in the hole booty. Pinnace gangplank reef coxswain mutiny bowsprit gunwalls yardarm Yellow Jack gangway. Swab Gold Road scuttle code of conduct grog reef sails walk the plank wherry gibbet Skip to cont Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead. Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead. Lucio fulci tremor est dark vivos magna. Expansis creepy arm yof darkness ulnis witchcraft missing carnem armis Kirkman Moore and Adlard caeruleum in locis. Romero morbo Congress amarus in auras. Nihil horum sagittis tincidunt, zombie slack-jawed gelida survival portenta. The unleashed virus est, et iam zombie mortui ambulabunt super terram. Souless mortuum glassy-eyed oculos attonitos indifferent back zom bieapoc alypse. An hoc dead snow braaaiiiins sociopathic incipere Clairvius Narcisse, an ante? Is bello mundi z? ho barque careen to go on account Letter of Marque Jack Tar heave to chase guns gangway. Chase guns grapple topmast furl coxswain flogging stern run a rig gangway draft. Topsail piracy handsomely ye careen rigging driver grog league topgallant. Bilge Arr Jack Ketch brig Davy Jones' Locker run a shot across the bow long clothes maroon wherry hulk. Run a rig Corsair strike colors lookout tender spyglass scallywag warp transom chantey. Piracy Jack Tar lad fore run a shot across the bow shrouds square-rigged parrel long clothes spike. Run a shot across the bow wench chandler fire in the hole rope's end walk the plank crow's nest lad Gold Road starboard. Loaded to the gunwalls Pirate Round Privateer capstan mizzen Cat o'nine tails lateen sail hearties Corsair overhaul. Long boat plunder hogshead reef blow the man down bilge rat log gun lugger loaded to the gunwalls. Cog spyglass poop deck Arr jib coxswain handsomely doubloon pink Pirate Round. Scourge of the seven seas rope's end weigh anchor fire in the hole reef sails me sheet spike jib mizzenmast. Sloop jib stern lookout flogging ye chase Barbary Coast black spot wherry. Rigging scourge of the seven seas Chain Shot swing the lead wherry Davy Jones' Locker reef sails yardarm rutters fire in the hole. Long boat mutiny log gaff draft hail-shot bounty bilge rat bring a spring upon her cable Nelsons folly. Chase guns brigantine heave down booty brig pillage black spot sloop six pounders spanker. Careen pillage spike reef sails gun capstan no prey, no pay deadlights bucko Spanish Main. Black spot lee crow's nest schooner gun hands barkadeer lateen sail pillage topgallant. Man-of-war Pirate Round sutler jolly boat spike yawl topgallant matey Spanish Main Letter of Marque. Pillage Sink me schooner bilge Buccaneer knave gaff carouser strike colors jack. Corsair American Main spanker come about barkadeer Sail ho hogshead nipperkin cog hail-shot. Blow the man down wherry keel port parrel gally keelhaul yardarm reef sails to go on account. Brigantine hempen halter skysail brig gibbet spirits lugsail knave come about matey. Matey poop deck topsail starboard aft Cat o'nine tails rigging lateen sail wherry run a shot across the bow. Jack bowsprit fathom fluke galleon black spot marooned hardtack Sail ho parrel. Corsair broadside Shiver me timbers ahoy Letter of Marque fathom crow's nest man-of-war bilge water Plate Fleet. Spirits pinnace grapple boatswain clipper jack Jack Ketch capstan gangway crack Jennys tea cup. Belay Arr topsail hulk barkadeer red ensign chandler overhaul clap of thunder matey. Overhaul topsail aye Davy Jones' Locker cable holystone fluke Yellow Jack matey gangway. Nipperkin starboard clap of thunder matey scuttle chandler boatswain Cat o'nine tails schooner heave to. Rum man-of-war plunder jolly boat long clothes Admiral of the Black cackle fruit ye hogshead dead men tell no tales. Tender run a rig pirate snow galleon scourge of the seven seas loaded to the gunwalls mizzen cog scallywag. Cat o'nine tails carouser American Main swing the lead gangplank Corsair log Jolly Roger warp coxswain. Weigh anchor skysail tender handsomely main sheet hempen halter lee Letter of Marque quarter scourge of the seven seas. Yardarm overhaul chantey scurvy plunder rope's end port barkadeer log matey. Interloper chase take a caulk hempen halter log no prey, no pay ye lanyard stern overhaul. Grog blossom Brethren of the Coast reef sails lugger crack Jennys tea cup Privateer lateen sail run a shot across the bow ballast Cat o'nine tails. Mizzenmast chandler Pirate Round aye Jack Ketch sutler to go on account line lateen sail furl. Dead men tell no tales line nipperkin doubloon dance the hempen jig black spot broadside carouser marooned lugger. Hardtack red ensign haul wind chase Pirate Round loaded to the gunwalls booty aft spike ho. Starboard doubloon spike tender parrel Davy Jones' Locker hulk Arr jack pirate. Hempen halter heave down haul wind bowsprit Shiver me timbers Plate Fleet bilge water plunder Yellow Jack piracy. Lugger draught sheet Nelsons folly hail-shot grog jolly boat Shiver me timbers lee come about. Long boat skysail Sink me Buccaneer hardtack quarter lookout execution dock scurvy coxswain. Avast cutlass case shot scuttle capstan wench provost doubloon lateen sail Sea Legs. Spirits snow careen ahoy bilge rat to go on account scurvy gally log execution dock. Main sheet Privateer knave black spot scuttle spirits piracy crack Jennys tea cup clipper furl. Reef sails topmast parrel bilge water Jack Ketch Pirate Round hogshead bowsprit schooner red ensign. Shiver me timbers tack bilge rat hardtack interloper capstan topgallant killick smartly loot. Line fore to go on account carouser loaded to the gunwalls topmast lass snow lateen sail lanyard. Port Gold Road coffer killick coxswain red ensign lugsail cutlass Chain Shot carouser. Bilge water smartly shrouds lass yard Privateer walk the plank interloper brig log. Square-rigged killick holystone pirate barque bilge rat hempen halter piracy scourge of the seven seas crack Jennys tea cup. Sloop man-of-war grapple holystone cackle fruit long boat quarterdeck pinnace cutlass Yellow Jack. Mizzen Spanish Main Gold Road bounty holystone trysail spirits bilged on her anchor boatswain carouser. Scurvy jack gibbet Nelsons folly handsomely splice the main brace pressgang transom execution dock coffer. Flogging rutters reef chantey Davy Jones' Locker Sink me mizzenmast sheet hardtack ballast. Admiral of the Black jack run a rig Letter of Marque Jolly Roger gangplank flogging belaying pin Sea Legs spike. Blimey long boat tackle cog boatswain Davy Jones' Locker gibbet gabion avast fore. Pink bucko poop deck dead men tell no tales splice the main brace Sea Legs scuttle pressgang Barbary Coast landlubber or just lubber. Gaff scourge of the seven seas reef sails jib bilge rat long boat bowsprit jack barkadeer hands. Spyglass fore deadlights parrel fire in the hole fire ship coffer run a rig no prey, no pay schooner. \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/f74d6899-9ed2-4137-9876-66b070553f8f/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"f74d6899-9ed2-4137-9876-66b070553f8f",
+						"books"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (invalid values)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": null,\n\t\"description\": \"Bilge water execution dock Sink me barkadeer splice the main brace Chain Shot chase guns handsomely line Sail ho. Piracy yardarm driver measured fer yer chains rigging swab scuppers pressgang pirate ye. Black spot me grog blossom squiffy furl yo-ho-ho handsomely topmast boatswain code of conduct. Blow the man down ahoy shrouds Chain Shot stern parley jib quarterdeck fire in the hole booty. Pinnace gangplank reef coxswain mutiny bowsprit gunwalls yardarm Yellow Jack gangway. Swab Gold Road scuttle code of conduct grog reef sails walk the plank wherry gibbet Skip to cont Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead. Cum horribilem walking dead resurgere de crazed sepulcris creaturis, zombie sicut de grave feeding iride et serpens. Pestilentia, shaun ofthe dead scythe animated corpses ipsa screams. Pestilentia est plague haec decaying ambulabat mortuos. Sicut zeder apathetic malus voodoo. Aenean a dolor plan et terror soulless vulnerum contagium accedunt, mortui iam vivam unlife. Qui tardius moveri, brid eof reanimator sed in magna copia sint terribiles undeath legionis. Alii missing oculis aliorum sicut serpere crabs nostram. Putridi braindead odores kill and infect, aere implent left four dead. Lucio fulci tremor est dark vivos magna. Expansis creepy arm yof darkness ulnis witchcraft missing carnem armis Kirkman Moore and Adlard caeruleum in locis. Romero morbo Congress amarus in auras. Nihil horum sagittis tincidunt, zombie slack-jawed gelida survival portenta. The unleashed virus est, et iam zombie mortui ambulabunt super terram. Souless mortuum glassy-eyed oculos attonitos indifferent back zom bieapoc alypse. An hoc dead snow braaaiiiins sociopathic incipere Clairvius Narcisse, an ante? Is bello mundi z? ho barque careen to go on account Letter of Marque Jack Tar heave to chase guns gangway. Chase guns grapple topmast furl coxswain flogging stern run a rig gangway draft. Topsail piracy handsomely ye careen rigging driver grog league topgallant. Bilge Arr Jack Ketch brig Davy Jones' Locker run a shot across the bow long clothes maroon wherry hulk. Run a rig Corsair strike colors lookout tender spyglass scallywag warp transom chantey. Piracy Jack Tar lad fore run a shot across the bow shrouds square-rigged parrel long clothes spike. Run a shot across the bow wench chandler fire in the hole rope's end walk the plank crow's nest lad Gold Road starboard. Loaded to the gunwalls Pirate Round Privateer capstan mizzen Cat o'nine tails lateen sail hearties Corsair overhaul. Long boat plunder hogshead reef blow the man down bilge rat log gun lugger loaded to the gunwalls. Cog spyglass poop deck Arr jib coxswain handsomely doubloon pink Pirate Round. Scourge of the seven seas rope's end weigh anchor fire in the hole reef sails me sheet spike jib mizzenmast. Sloop jib stern lookout flogging ye chase Barbary Coast black spot wherry. Rigging scourge of the seven seas Chain Shot swing the lead wherry Davy Jones' Locker reef sails yardarm rutters fire in the hole. Long boat mutiny log gaff draft hail-shot bounty bilge rat bring a spring upon her cable Nelsons folly. Chase guns brigantine heave down booty brig pillage black spot sloop six pounders spanker. Careen pillage spike reef sails gun capstan no prey, no pay deadlights bucko Spanish Main. Black spot lee crow's nest schooner gun hands barkadeer lateen sail pillage topgallant. Man-of-war Pirate Round sutler jolly boat spike yawl topgallant matey Spanish Main Letter of Marque. Pillage Sink me schooner bilge Buccaneer knave gaff carouser strike colors jack. Corsair American Main spanker come about barkadeer Sail ho hogshead nipperkin cog hail-shot. Blow the man down wherry keel port parrel gally keelhaul yardarm reef sails to go on account. Brigantine hempen halter skysail brig gibbet spirits lugsail knave come about matey. Matey poop deck topsail starboard aft Cat o'nine tails rigging lateen sail wherry run a shot across the bow. Jack bowsprit fathom fluke galleon black spot marooned hardtack Sail ho parrel. Corsair broadside Shiver me timbers ahoy Letter of Marque fathom crow's nest man-of-war bilge water Plate Fleet. Spirits pinnace grapple boatswain clipper jack Jack Ketch capstan gangway crack Jennys tea cup. Belay Arr topsail hulk barkadeer red ensign chandler overhaul clap of thunder matey. Overhaul topsail aye Davy Jones' Locker cable holystone fluke Yellow Jack matey gangway. Nipperkin starboard clap of thunder matey scuttle chandler boatswain Cat o'nine tails schooner heave to. Rum man-of-war plunder jolly boat long clothes Admiral of the Black cackle fruit ye hogshead dead men tell no tales. Tender run a rig pirate snow galleon scourge of the seven seas loaded to the gunwalls mizzen cog scallywag. Cat o'nine tails carouser American Main swing the lead gangplank Corsair log Jolly Roger warp coxswain. Weigh anchor skysail tender handsomely main sheet hempen halter lee Letter of Marque quarter scourge of the seven seas. Yardarm overhaul chantey scurvy plunder rope's end port barkadeer log matey. Interloper chase take a caulk hempen halter log no prey, no pay ye lanyard stern overhaul. Grog blossom Brethren of the Coast reef sails lugger crack Jennys tea cup Privateer lateen sail run a shot across the bow ballast Cat o'nine tails. Mizzenmast chandler Pirate Round aye Jack Ketch sutler to go on account line lateen sail furl. Dead men tell no tales line nipperkin doubloon dance the hempen jig black spot broadside carouser marooned lugger. Hardtack red ensign haul wind chase Pirate Round loaded to the gunwalls booty aft spike ho. Starboard doubloon spike tender parrel Davy Jones' Locker hulk Arr jack pirate. Hempen halter heave down haul wind bowsprit Shiver me timbers Plate Fleet bilge water plunder Yellow Jack piracy. Lugger draught sheet Nelsons folly hail-shot grog jolly boat Shiver me timbers lee come about. Long boat skysail Sink me Buccaneer hardtack quarter lookout execution dock scurvy coxswain. Avast cutlass case shot scuttle capstan wench provost doubloon lateen sail Sea Legs. Spirits snow careen ahoy bilge rat to go on account scurvy gally log execution dock. Main sheet Privateer knave black spot scuttle spirits piracy crack Jennys tea cup clipper furl. Reef sails topmast parrel bilge water Jack Ketch Pirate Round hogshead bowsprit schooner red ensign. Shiver me timbers tack bilge rat hardtack interloper capstan topgallant killick smartly loot. Line fore to go on account carouser loaded to the gunwalls topmast lass snow lateen sail lanyard. Port Gold Road coffer killick coxswain red ensign lugsail cutlass Chain Shot carouser. Bilge water smartly shrouds lass yard Privateer walk the plank interloper brig log. Square-rigged killick holystone pirate barque bilge rat hempen halter piracy scourge of the seven seas crack Jennys tea cup. Sloop man-of-war grapple holystone cackle fruit long boat quarterdeck pinnace cutlass Yellow Jack. Mizzen Spanish Main Gold Road bounty holystone trysail spirits bilged on her anchor boatswain carouser. Scurvy jack gibbet Nelsons folly handsomely splice the main brace pressgang transom execution dock coffer. Flogging rutters reef chantey Davy Jones' Locker Sink me mizzenmast sheet hardtack ballast. Admiral of the Black jack run a rig Letter of Marque Jolly Roger gangplank flogging belaying pin Sea Legs spike. Blimey long boat tackle cog boatswain Davy Jones' Locker gibbet gabion avast fore. Pink bucko poop deck dead men tell no tales splice the main brace Sea Legs scuttle pressgang Barbary Coast landlubber or just lubber. Gaff scourge of the seven seas reef sails jib bilge rat long boat bowsprit jack barkadeer hands. Spyglass fore deadlights parrel fire in the hole fire ship coffer run a rig no prey, no pay schooner. \"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (null description)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"A Game of Thrones - Updated\",\n\t\"description\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (null title == null description)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": null,\n\t\"description\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (remove unexisting property)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"remove\",\n        \"path\": \"/thisdoesnotexist\",\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (remove description)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"remove\",\n        \"path\": \"/description\",\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/447eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"447eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (UPSERT - invalid patch document)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"remove\",\n        \"path\": \"/thisdoesnotexist\",\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/567eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"567eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author (UPSERT - valid patch document, no title)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json-patch+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n        \"op\": \"add\",\n        \"path\": \"/description\",\n        \"value\": \"The Winds of Winter - Description\"\n\t}\n]"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe/books/567eb762-95e9-4c31-95e1-b20053fbe215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe",
+						"books",
+						"567eb762-95e9-4c31-95e1-b20053fbe215"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Book for Author",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n    <DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n    \t<d3p1:DateTime>1948-03-03T00:00:00Z</d3p1:DateTime>\n    \t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n    </DateOfBirth>\n    <FirstName>James</FirstName>\n    <Genre>Thriller</Genre>\n    <LastName>Ellroy</LastName>\n</AuthorForCreationDto>"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/25320c5e-f58a-4b1f-b63a-8ee07a840bdf/books/70a1f9b9-0a37-4c1a-99b1-c7709fc64167",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"25320c5e-f58a-4b1f-b63a-8ee07a840bdf",
+						"books",
+						"70a1f9b9-0a37-4c1a-99b1-c7709fc64167"
 					]
 				},
 				"description": ""

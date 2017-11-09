@@ -1,0 +1,606 @@
+{
+	"info": {
+		"name": "RESTful API ASP.NET Core #2",
+		"_postman_id": "58a6fda6-ba0d-bf42-57b5-143a8d08fa57",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (pageNumber = 1, pageSize = 5)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?pageNumber=1&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "5",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (pageNumber = 2, pageSize = 5)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?pageNumber=2&pageSize=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "5",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (genre = Fantasy)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?genre=Fantasy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Fantasy",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (genre = Fantasy, pageNumber=2, pageSize=1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?genre=Fantasy&pageNumber=2&pageSize=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "genre",
+							"value": "Fantasy",
+							"equals": true
+						},
+						{
+							"key": "pageNumber",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (searchQuery = a)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?searchQuery=a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "searchQuery",
+							"value": "a",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (searchQuery = a, genre = Fantasy)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?searchQuery=a&genre=Fantasy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "searchQuery",
+							"value": "a",
+							"equals": true
+						},
+						{
+							"key": "genre",
+							"value": "Fantasy",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (searchQuery = a, genre = Fantasy, &pageNumber=2&pageSize=1 )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?searchQuery=a&genre=Fantasy&pageNumber=2&pageSize=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "searchQuery",
+							"value": "a",
+							"equals": true
+						},
+						{
+							"key": "genre",
+							"value": "Fantasy",
+							"equals": true
+						},
+						{
+							"key": "pageNumber",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "1",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = name)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = name desc)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=name desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = name desc, pageNumber = 2, pageSize = 2)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=name desc&pageNumber=2&pageSize=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "name desc",
+							"equals": true
+						},
+						{
+							"key": "pageNumber",
+							"value": "2",
+							"equals": true
+						},
+						{
+							"key": "pageSize",
+							"value": "2",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = genre)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=genre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "genre",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = genre desc)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=genre desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "genre desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = age, genre desc)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=age, genre desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "age, genre desc",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (orderBy = dateofbirth)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?orderBy=dateofbirth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "dateofbirth",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (fields = id)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?fields=id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (fields = id, name)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors?fields=id,name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,name",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (fields = id, name)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe?fields=id,name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "id,name",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (fields = FirstName)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors/76053df4-6687-4353-8937-b45556748abe?fields=FirstName",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors",
+						"76053df4-6687-4353-8937-b45556748abe"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "FirstName",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

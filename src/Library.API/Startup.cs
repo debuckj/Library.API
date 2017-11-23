@@ -1,4 +1,5 @@
-﻿using Library.API.Entities;
+﻿using AutoMapper;
+using Library.API.Entities;
 using Library.API.Helpers;
 using Library.API.Services;
 using Microsoft.AspNetCore.Builder;
@@ -38,6 +39,8 @@ namespace Library.API
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper();
+
             services.AddMvc(setupAction =>
             {
                 setupAction.ReturnHttpNotAcceptable = true;
@@ -112,6 +115,7 @@ namespace Library.API
                 });
             }
 
+            /*      Moved to MappingProfile
 
             AutoMapper.Mapper.Initialize(cfg =>
             {
@@ -126,6 +130,8 @@ namespace Library.API
                 cfg.CreateMap<Models.BookForUpdateDto, Entities.Book>();
                 cfg.CreateMap<Entities.Book, Models.BookForUpdateDto>();
             });
+
+            */
 
             libraryContext.EnsureSeedDataForContext();
 

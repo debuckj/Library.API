@@ -182,7 +182,12 @@
 			"name": "Authors",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
 				"body": {},
 				"url": {
 					"raw": "http://localhost:6058/api/authors",
@@ -207,7 +212,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "http://localhost:6058/api/authors?orderBy=name&searchQuery=a&genre=Fantasy&pageNumber=2&pageSize=1",
+					"raw": "http://localhost:6058/api/authors?orderBy=name&searchQuery=a&genre=Fantasy&pageNumber=1&pageSize=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -235,7 +240,7 @@
 						},
 						{
 							"key": "pageNumber",
-							"value": "2",
+							"value": "1",
 							"equals": true
 						},
 						{
@@ -243,6 +248,196 @@
 							"value": "1",
 							"equals": true
 						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors (Accept = application/vnd.marvin.hateoas+json)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.marvin.hateoas+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "root (Accept = application/vnd.marvin.hateoas+json)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.marvin.hateoas+json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:6058/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author (application/vnd.marvin.author.full+json)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.marvin.author.full+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"James\",\n    \"lastName\": \"Ellroy\",\n    \"dateOfBirth\": \"1948-03-04T00:00:00\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author w DoD (application/vnd.marvin.authorwithdateofdeath.full+json)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.marvin.authorwithdateofdeath.full+json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"JD\",\n    \"lastName\": \"Salinger\",\n    \"dateOfBirth\": \"1919-01-01T00:00:00\",\n    \"dateOfDeath\": \"2010-01-17T00:00:00\",\n    \"genre\": \"Thriller\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Author w DoD (application/vnd.marvin.authorwithdateofdeath.full+xml)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.marvin.authorwithdateofdeath.full+xml"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<AuthorForCreationWithDateOfDeathDto xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns=\"http://schemas.datacontract.org/2004/07/Library.API.Models\">\n\t<DateOfBirth xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n\t\t<d3p1:DateTime>1919-01-01T00:00:00Z</d3p1:DateTime>\n\t\t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n\t</DateOfBirth>\n\t<DateOfDeath xmlns:d3p1=\"http://schemas.datacontract.org/2004/07/System\">\n\t\t<d3p1:DateTime>2010-01-17T00:00:00Z</d3p1:DateTime>\n\t\t<d3p1:OffsetMinutes>0</d3p1:OffsetMinutes>\n\t</DateOfDeath>\n\t<FirstName>JD</FirstName>\n\t<Genre>Drama</Genre>\n\t<LastName>Salinger</LastName>\n</AuthorForCreationWithDateOfDeathDto>\n\t\t"
+				},
+				"url": {
+					"raw": "http://localhost:6058/api/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6058",
+					"path": [
+						"api",
+						"authors"
 					]
 				},
 				"description": ""
